@@ -1,0 +1,61 @@
+//proyecto_nest/tsconfig.json
+{
+  "compilerOptions": {
+    // Especifica el sistema de módulos que TypeScript usará al compilar el código
+    "module": "commonjs", // Sistema de módulos utilizado por Node.js
+
+    // Genera archivos de declaración .d.ts junto con los archivos .js compilados
+    "declaration": true,// útil si estás creando una librería o una API
+
+    // Elimina los comentarios en los archivos compilados para reducir su tamaño
+    "removeComments": true, // Útil en producción.
+
+    // Necesario para trabajar con decoradores en TypeScript (decoradores de NestJS)
+    "emitDecoratorMetadata": true, // Permite la emisión de metadatos para los decoradores
+
+     // Habilita el uso de decoradores experimentales, requerido por NestJS
+    "experimentalDecorators": true, // Activa el soporte para decoradores (requerido para NestJS)
+
+     // Permite las importaciones sintéticas de módulos por defecto
+    "allowSyntheticDefaultImports": true, // Permite importar módulos sin una exportación por defecto
+
+    // Define la versión de ECMAScript a la que TypeScript compilará el código
+    "target": "ES2021", // Establece la versión de JS, ES2021 es una buena opción moderna y ampliamente compatible
+
+    // Crea mapas de fuente (.map) que permiten depurar el código TypeScript directamente
+    "sourceMap": true, // útil para depuración, se genera un archivo .map asociado al código JavaScript
+
+    // Define el directorio de salida donde se guardarán los archivos .js compilados
+    "outDir": "./dist", // Los archivos JS compilados se guardarán en esta carpeta
+
+    // Establece la base para la resolución de módulos, si trabajas con rutas relativas complejas
+    "baseUrl": "./", // Establece la base para resolver rutas de módulos, normalmente es el directorio raíz del proyecto
+
+    // Habilita la compilación incremental, que acelera las compilaciones al recompilar solo los archivos modificados
+    "incremental": true, // Mejora la velocidad de compilación en proyectos grandes
+
+    // Omite la verificación de tipos en las bibliotecas (archivos .d.ts), puede acelerar la compilación
+    "skipLibCheck": true, // Evita comprobar las bibliotecas externas, útil para acelerar la compilación
+
+    // Requiere que se comprueben los valores nulos y undefined en el código, mejor para evitar errores
+    "strictNullChecks": true, // Si está activado, evita que se asignen null o undefined a variables que no sean de ese tipo
+
+    // Habilita un error cuando TypeScript detecta un tipo "any" implícito
+    "noImplicitAny": true, // Asegura que no se utilicen tipos "any" sin especificar explícitamente el tipo
+
+    // Asegura que los métodos como .bind(), .call() y .apply() sean utilizados correctamente con los tipos
+    "strictBindCallApply": true, // Mejora la seguridad de estos métodos, requiere que se comprueben sus tipos
+
+    // Fuerza la consistencia en el uso de mayúsculas y minúsculas en los nombres de los archivos
+    "forceConsistentCasingInFileNames": true, // En sistemas operativos sensibles a mayúsculas/minúsculas (como Linux), evita errores
+
+    "noFallthroughCasesInSwitch": false, // Permite que los "switch" no tengan un "break" entre los casos
+    
+    // Cambiar a ES2021 para tener las últimas características de JavaScript
+    "lib": ["es2021"],  // Usar ES2021 para las bibliotecas de JavaScript
+  },
+
+  // Fuera de compilerOptions, coloca estas configuraciones
+  "include": ["src/**/*"],  // Incluir todos los archivos dentro de src
+  "exclude": ["node_modules"]  // Excluir node_modules de la compilación
+}
