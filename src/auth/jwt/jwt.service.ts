@@ -5,7 +5,6 @@ import { JwtPayload } from '../interfaces/jwt-payload/jwt-payload';  // Importa 
 
 // NOTA: Actualmente, se esta usando 'jsonwebtoken' en auth.service para firmar manualmente el token debido a problemas con JwtService.
 // La firma manual fue la única solución que funcionó para devolver el token correctamente.
-// JwtService se mantiene para un uso futuro
 
 /**
  * @class JwtService

@@ -8,6 +8,8 @@ import * as jwt from 'jsonwebtoken';  // Importa jsonwebtoken para la firma manu
 
 // NOTA: Se usa 'jsonwebtoken' para firmar manualmente el token debido a problemas con JwtService de NestJS.
 // La firma manual fue la única solución que funcionó para devolver el token correctamente.
+// Se conserva JwService en el código como documentación
+//Para usar jsonwebtoken, descargar dependencias: npm install jsonwebtoken
 
 @Injectable()
 export class AuthService {
