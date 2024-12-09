@@ -1,8 +1,8 @@
 //proyecto_nest/src/categories/categories.module.ts
-import { Module } from '@nestjs/common';
-import { CategoriesService } from './categories.service';
-import { CategoriesController } from './categories.controller';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { Module } from '@nestjs/common'; //Importa decorador Module
+import { CategoriesService } from './categories.service'; //Importa servicio
+import { CategoriesController } from './categories.controller'; //Importa controlador
+import { TypeOrmModule } from '@nestjs/typeorm'; //Importa TypeOrModule
 import { Category } from './category.entity';  // Importa la entidad de categorías
 import { AuthModule } from '../auth/auth.module'; // Asegúrate de importar el AuthModule
 

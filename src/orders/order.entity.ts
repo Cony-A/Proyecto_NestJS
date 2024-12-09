@@ -1,7 +1,7 @@
 //proyecto_nest/src/orders/order.entity.ts
 
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany, JoinColumn } from 'typeorm';
-import { User } from '../users/user.entity';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany, JoinColumn } from 'typeorm'; //Importa decoradores
+import { User } from '../users/user.entity'; //Importa la entidad order
 import { OrderProduct } from './order-product.entity';  // Relación con la nueva entidad OrderProduct
 
 @Entity('orders')

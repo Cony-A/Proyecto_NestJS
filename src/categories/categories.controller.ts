@@ -1,10 +1,10 @@
 // src/categories/categories.controller.ts
-import { Controller, Post, Body, Get, Param, Put, Delete } from '@nestjs/common';
-import { CategoriesService } from './categories.service';
+import { Controller, Post, Body, Get, Param, Put, Delete } from '@nestjs/common'; //Importa decoradores y solicitudes HTTP
+import { CategoriesService } from './categories.service'; //Importa servicio
 import { CreateCategoryDto } from './dto/create-category.dto';  // Importa el DTO para crear categorías
 import { Roles } from '../auth/roles.decorator'; // Importa el decorador Roles
 import { RolesGuard } from '../auth/roles.guard'; // Importa los Roles Guards
-import { UseGuards } from '@nestjs/common';  
+import { UseGuards } from '@nestjs/common';   //Importa guards
 
 @Controller('categories')
 export class CategoriesController {

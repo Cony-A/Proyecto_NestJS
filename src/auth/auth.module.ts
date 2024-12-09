@@ -1,7 +1,7 @@
 //proyecto_nest/src/auth/auth.module.ts
 import { forwardRef, Module } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { JwtService } from '@nestjs/jwt'; // Asegúrate de importar JwtService
+import { JwtService } from '@nestjs/jwt'; 
 import { AuthController } from './auth.controller';
 import { JwtModule } from '@nestjs/jwt';  // Importa JwtModule de NestJS
 import { UsersModule } from '../users/users.module'; // Importa el módulo de usuarios
@@ -18,7 +18,7 @@ dotenv.config();
     }),
     forwardRef(() => UsersModule), // Para resolver la dependencia circular
   ],
-  providers: [AuthService, JwtService], // Usamos JwtService en lugar de NestJwtService
+  providers: [AuthService, JwtService],
   controllers: [AuthController], // Registrar el controlador de autenticación
   exports: [ AuthService, JwtService, JwtModule], // Exportar JwtService, JwtModule y AuthService para ser usados en otros módulos
 })

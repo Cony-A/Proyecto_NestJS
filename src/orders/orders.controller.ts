@@ -1,8 +1,8 @@
 //proyecto_nest/src/orders/orders.controller.ts
-import { Controller, Post, Body, Get, Param, Put, Delete, UseGuards } from '@nestjs/common';
-import { OrdersService } from './orders.service';
-import { RolesGuard } from '../auth/roles.guard';
-import { Roles } from '../auth/roles.decorator';
+import { Controller, Post, Body, Get, Param, Put, Delete, UseGuards } from '@nestjs/common'; //Importa decoradores y solicitudes HTTP
+import { OrdersService } from './orders.service'; //Importa servicio
+import { RolesGuard } from '../auth/roles.guard'; //Importa guards
+import { Roles } from '../auth/roles.decorator'; //Importa roles
 import { CreateOrderDto } from './dto/create-order.dto';  // Importamos el DTO de órdenes
 
 @Controller('orders')

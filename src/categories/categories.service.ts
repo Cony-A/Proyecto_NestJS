@@ -1,7 +1,7 @@
 //proyecto_nest/src/categories/categories.service.ts
-import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Injectable } from '@nestjs/common'; // Importa el decorador Injectable para declarar que esta clase es un servicio que puede ser inyectado en otros componentes
+import { InjectRepository } from '@nestjs/typeorm'; // Importa el decorador InjectRepository para inyectar los repositorios de TypeORM en el servicio
+import { Repository } from 'typeorm';  // Importa la clase Repository de TypeORM para interactuar con la base de datos
 import { Category } from './category.entity';  // Importa la entidad Category
 import { CreateCategoryDto } from './dto/create-category.dto';  // Importa el DTO
 

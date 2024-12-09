@@ -1,5 +1,5 @@
 //proyecto_nest/src/categories/category.entity.ts
-import { Entity, Column, PrimaryGeneratedColumn,  OneToMany } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn,  OneToMany } from 'typeorm'; //Importa decoradores
 import { Product } from '../products/product.entity';  // Relacionamos con los productos
 
 @Entity()

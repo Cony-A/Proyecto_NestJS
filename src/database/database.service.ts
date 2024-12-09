@@ -1,5 +1,5 @@
 //proyecto_nest/src/database/database.service.ts
-import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common'; // Importa el decorador Injectable para declarar que esta clase es un servicio que puede ser inyectado en otros componentes
 
 import { DataSource } from 'typeorm'; // Importa DataSource
 

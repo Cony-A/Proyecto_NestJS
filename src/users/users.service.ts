@@ -1,7 +1,7 @@
 //proyecto_nest/src/users/users.service.ts
-import { Injectable } from '@nestjs/common'; // Importa los decoradores y clases necesarias 
-import { InjectRepository } from '@nestjs/typeorm'; // Importa los decoradores y clases necesarias 
-import { Repository } from 'typeorm'; // Importa los decoradores y clases necesarias 
+import { Injectable } from '@nestjs/common'; // Importa el decorador Injectable para declarar que esta clase es un servicio que puede ser inyectado en otros componentes
+import { InjectRepository } from '@nestjs/typeorm'; // Importa el decorador InjectRepository para inyectar los repositorios de TypeORM en el servicio
+import { Repository } from 'typeorm';  // Importa la clase Repository de TypeORM para interactuar con la base de datos
 import { User } from './user.entity'; // Entidad de usuario
 import * as bcrypt from 'bcrypt'; // Librería para cifrar contraseñass
 

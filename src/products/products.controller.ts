@@ -1,6 +1,6 @@
 //proyecto_nest/src/products/products.controller.ts
-import { Controller, Post, Body, Get, Param, Put, Delete } from '@nestjs/common';
-import { ProductsService } from './products.service';
+import { Controller, Post, Body, Get, Param, Put, Delete } from '@nestjs/common'; //Importa decoradores y solicitudes HTTP
+import { ProductsService } from './products.service'; //Importa servicio
 import { Roles } from '../auth/roles.decorator'; // Importa el decorador Roles, utilizado para restringir el acceso a ciertas rutas según el rol.
 import { RolesGuard } from '../auth/roles.guard'; // Importa el guardia RolesGuard, que protege las rutas según los roles del usuario.
 import { UseGuards } from '@nestjs/common'; // Importa 'UseGuards' para aplicar el guardia en las rutas.
