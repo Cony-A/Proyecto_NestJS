@@ -1,6 +1,11 @@
 // src/categories/dto/create-category.dto.ts
 import { IsString, IsOptional } from 'class-validator'; // Importa validadores de class-validator
 
+/**
+ * @class CreateOrderDto
+ * @description Define los datos necesarios para crear una nueva categoria.
+ */
+
 export class CreateCategoryDto {
   
   //Nombre de la categoría.

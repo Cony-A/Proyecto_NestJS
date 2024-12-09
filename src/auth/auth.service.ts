@@ -1,17 +1,28 @@
 //proyecto_nest/src/auth/auth.service.ts
 import { Injectable } from '@nestjs/common'; // Importa el decorador Injectable
 import * as bcrypt from 'bcrypt'; // Importa la librería bcrypt para comparar y cifrar contraseñas
-import { JwtService } from '@nestjs/jwt'; // Importa el JwtService de NestJS para trabajar con JWT
+//import { JwtService } from '@nestjs/jwt'; // Importa el JwtService de NestJS para trabajar con JWT
 import { UsersService } from '../users/users.service'; // Importamos UsersService
 import { LoginDto } from './dto/login.dto'; // Importa el DTO
 import * as jwt from 'jsonwebtoken';  // Importa jsonwebtoken para la firma manual
 
+// NOTA: Se usa 'jsonwebtoken' para firmar manualmente el token debido a problemas con JwtService de NestJS.
+// La firma manual fue la única solución que funcionó para devolver el token correctamente.
+// JwtService se mantiene en el constructor para facilitar una futura solución
+
 @Injectable()
 export class AuthService {
   constructor(
-    private readonly jwtService: JwtService, // Inyecta el JwtService para generar tokens JWT
+    //private readonly jwtService: JwtService, // Inyecta el JwtService para generar tokens JWT (actualmente no se esta utilizando)
     private readonly usersService: UsersService,  // Inyectamos UsersService
   ) {}
+
+  /**
+   * @route POST /auth/login
+   * @description Inicia sesión y genera un token JWT.
+   * @param loginDto - DTO con los datos de login (email y password).
+   * @returns El token JWT generado.
+   */
 
   // Método para el inicio de sesión que devuelve un token JWT
   async login(loginDto: LoginDto): Promise<string> {

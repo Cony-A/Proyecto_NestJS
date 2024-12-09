@@ -1,6 +1,11 @@
 // Ruta: src/users/dto/create-user.dto.ts
 import { IsString, IsEmail, IsNotEmpty } from 'class-validator';  // Importa las validaciones de class-validator
 
+/**
+ * @class CreateOrderDto
+ * @description Define los datos necesarios para crear un nuevo usuario.
+ */
+
 export class CreateUserDto {
   @IsEmail()  // Valida que el correo sea correcto
   @IsNotEmpty({ message: 'El correo electrónico es obligatorio' }) // Asegura que el email no esté vacío

@@ -1,6 +1,11 @@
 // src/products/dto/create-product.dto.ts
 import { IsString, IsNumber, IsPositive, IsNotEmpty } from 'class-validator';  // Importa las validaciones de class-validator
 
+/**
+ * @class CreateOrderDto
+ * @description Define los datos necesarios para crear un nuevo producto.
+ */
+
 export class CreateProductDto {
   @IsString()  // Asegura que el nombre sea una cadena de texto
   @IsNotEmpty({ message: 'El nombre del producto es obligatorio' })

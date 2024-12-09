@@ -1,5 +1,5 @@
 //proyecto_nest/src/users/user.entity.ts
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm'; //Importamos decoradores
 import { Order } from '../orders/order.entity'; // Importa la entidad de pedidos
 
 @Entity() // Declara que esta clase es una entidad (correspondiente a una tabla en la base de datos)

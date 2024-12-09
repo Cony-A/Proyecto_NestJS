@@ -1,10 +1,11 @@
 // Ruta: src/orders/dto/create-order.dto.ts
-import { IsArray, IsNumber, IsNotEmpty } from 'class-validator';
+import { IsArray, IsNumber, IsNotEmpty } from 'class-validator'; // Importa las validaciones de class-validator
 
 /**
  * @class CreateOrderDto
  * @description Define los datos necesarios para crear un nuevo pedido.
  */
+
 export class CreateOrderDto {
   @IsNumber()  // Asegura que el userId sea un número
   @IsNotEmpty({ message: 'El ID del usuario es obligatorio' })

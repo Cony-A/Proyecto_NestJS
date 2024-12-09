@@ -13,6 +13,8 @@ export class UsersService {
 
   // Crear un nuevo usuario
   async createUser(email: string, name: string, password: string, role: string = 'user'): Promise<User> {
+    
+    // Verifica si el correo ya existe en la base de datos
     const existingUser = await this.usersRepository.findOne({ where: { email } });
     if (existingUser) {
       throw new Error('El correo electrónico ya está registrado');
