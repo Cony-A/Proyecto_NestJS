@@ -7,6 +7,12 @@ import { JwtModule } from '@nestjs/jwt';  // Importa JwtModule de NestJS
 import { UsersModule } from '../users/users.module'; // Importa el módulo de usuarios
 import * as dotenv from 'dotenv'; // Importa dotenv para manejar variables de entorno
 
+// NOTA: Se usó 'jsonwebtoken' para firmar manualmente y verificar el token JWT debido a problemas con JwtService de NestJS.
+// La firma manual fue la única solución que funcionó para devolver el token correctamente.
+// Se conserva JwService en el código como parte de la documentación y/o para posibles usos a futuro o correciones
+//Se decidió conservar el código auth.module con JwtService para no alterar otras posibles funcionalidades
+//Para usar jsonwebtoken, descargar dependencias: npm install jsonwebtoken
+
 // Cargar variables de entorno desde el archivo .env
 dotenv.config();
 

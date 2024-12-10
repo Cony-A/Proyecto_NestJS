@@ -4,6 +4,11 @@ import { Injectable, NestMiddleware } from '@nestjs/common'; // Importa los deco
 import * as jwt from 'jsonwebtoken'; // Importa la librería jsonwebtoken para verificar el token JWT
 import { Request, Response, NextFunction } from 'express'; // Importa los tipos de Request, Response y NextFunction de Express para trabajar con las solicitudes HTTP
 
+// NOTA: Se usó 'jsonwebtoken' para firmar manualmente y verificar el token JWT debido a problemas con JwtService de NestJS.
+// La firma manual fue la única solución que funcionó para devolver el token correctamente.
+// Se conserva JwService en el código como parte de la documentación y/o para posibles usos a futuro o correciones
+//Para usar jsonwebtoken, descargar dependencias: npm install jsonwebtoken
+
 @Injectable()
 export class AuthMiddleware implements NestMiddleware {
   // Método 'use' que se ejecuta en cada solicitud HTTP
